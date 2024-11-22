@@ -4,6 +4,8 @@ public class Pedido {
     public DateTime DataCompra { get; set; }
     public string EnderecoEntrega { get; set; }
     public int QuantidadeBotijoes { get; set; }
+    public string CartaoCredito { get; set; }
+    public StatusPedido Status { get; set; }
 
     public decimal TotalCompra { 
         get {
@@ -15,10 +17,6 @@ public class Pedido {
             return DataCompra.AddHours(6);
         }
     }
-
-    public string CartaoCredito { get; set; }
-
-    public string Status { get; set; }
 
     public Pedido(string enderecoEntrega, DateTime dataCompra)
     {
