@@ -27,4 +27,17 @@ public class Pedido {
 
     }
 
+
+    public override string ToString()
+    {
+        return 
+            $"""
+            {this.CodigoPedido},
+            {this.EnderecoEntrega},
+            {this.DataCompra},
+            {this.QuantidadeBotijoes},
+            {this.TotalCompra:F2},
+            {this.DataEntrega}
+            """;
+    }
 }
