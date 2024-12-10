@@ -97,7 +97,7 @@ void FazerPedido ()
 
 void ConfirmarEntrega() 
 {
-    if (!pedidos.Any())
+    if (!pedidos.Any(x => x.Status == StatusPedido.CONFIRMADO))
     {
         Console.WriteLine("Nenhum pedido pendente para ter a entrega confirmada.");
         Console.ReadKey();
