@@ -97,6 +97,12 @@ void FazerPedido ()
 
 void ConfirmarEntrega() 
 {
+    if (!pedidos.Any())
+    {
+        Console.WriteLine("Nenhum pedido pendente para ter a entrega confirmada.");
+        return;
+    }
+    
     Console.WriteLine("Insira o Código do Pedido: ");
     int codigo = int.Parse(Console.ReadLine());
     Pedido? pedido = pedidos.FirstOrDefault(x => x.CodigoPedido == codigo);
