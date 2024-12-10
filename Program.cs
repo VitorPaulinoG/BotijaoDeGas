@@ -100,6 +100,7 @@ void ConfirmarEntrega()
     if (!pedidos.Any())
     {
         Console.WriteLine("Nenhum pedido pendente para ter a entrega confirmada.");
+        Console.ReadKey();
         return;
     }
     
